@@ -25,13 +25,13 @@ describe('axe testing', () => {
     cy.get('.todo-list li').last().should('have.text', 'Walk the dog')
   })*/
 
- it('dettol homepage', () => {
-     cy.checkPageA11y('https://www.dettol.co.uk/')
+ it('finish  homepage', () => {
+     cy.checkPageA11y('https://develop.d3w4tptge031mz.amplifyapp.com/')
  
 
  })
- it('dettol faq page', () => {
-  cy.checkPageA11y('https://www.dettol.co.uk/faq/')
+ it('finish all products page', () => {
+  cy.checkPageA11y('https://develop.d3w4tptge031mz.amplifyapp.com/products/')
 
 
 })

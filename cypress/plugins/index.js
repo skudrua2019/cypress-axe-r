@@ -15,10 +15,12 @@
 /**
  * @type {Cypress.PluginConfig}
  * */
- const { createHtmlReport } = require("axe-html-reporter");
 const { lighthouse, pa11y, prepareAudit } = require("cypress-audit");
+const { createHtmlReport } = require('axe-html-reporter');
 
- 
+const fs = require('fs')
+const dirPath = 'cypress/axe-report1'
+
 // eslint-disable-next-line no-unused-vars
 module.exports = (on, config) => {
   // `on` is used to hook into various events Cypress emits
@@ -39,13 +41,34 @@ module.exports = (on, config) => {
     table(message) {
       console.table(message)
       return null
-    }
-    createHtmlReport(){
+    },
+
+    createAxeReport(violations) {
+      createHtmlReport({
+        results: { violations: 'Result[]' },
+        options: {
+          // projectKey: 'JIRA_PROJECT_KEY',
+          outputDir: 'axe-reports',
+          reportFileName: 'exampleReport.html',
+        },
+      })
       return null
+    },
+    //write axe resultes to the json file 
+    writeResults(violations) {
+      if (fs.existsSync(dirPath)) {
+        fs.writeFileSync(dirPath + "axe.json", violations)
+      }else{
+        console.log(`${dirPath} not found`)
+      }
 
+
+      return null
     }
-    
-
   });
+
+
+
+
 }
 

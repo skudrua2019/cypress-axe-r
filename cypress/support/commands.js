@@ -1,28 +1,4 @@
-// ***********************************************
-// This example commands.js shows you how to
-// create various custom commands and overwrite
-// existing commands.
-//
-// For more comprehensive examples of custom
-// commands please read more here:
-// https://on.cypress.io/custom-commands
-// ***********************************************
-//
-//
-// -- This is a parent command --
-// Cypress.Commands.add('login', (email, password) => { ... })
-//
-//
-// -- This is a child command --
-// Cypress.Commands.add('drag', { prevSubject: 'element'}, (subject, options) => { ... })
-//
-//
-// -- This is a dual command --
-// Cypress.Commands.add('dismiss', { prevSubject: 'optional'}, (subject, options) => { ... })
-//
-//
-// -- This will overwrite an existing command --
-// Cypress.Commands.overwrite('visit', (originalFn, url, options) => { ... })
+import { createHtmlReport } from 'axe-html-reporter';
 
 const severity ={
     minor:'Minor',
@@ -31,30 +7,34 @@ const severity ={
     critical: 'Crit'
 }
 
-function callback(violations){
-    violations.forEach(violation => {
-        const nodes = Cypress.$(violation.nodes.map(node => node.target).join(','))
-        Cypress.log({
-            name: `${severity[violation.impact]} A11Y`,
-            consoleProps: () => violation,
-            $el: nodes,
-            message: `[${violation.help}](${violation.helpUrl})`
-        })
-        
-        violation.nodes.forEach(({target}) => {
-            Cypress.log({
-                name: `TT`,
-                consoleProps: () => violation,
-                $el: Cypress.$(target.join(',')),
-                message:target
-            })
-        })
+function callback(violations) {
+  violations.forEach((violation) => {
+    const nodes = Cypress.$(
+      violation.nodes.map((node) => node.target).join(",")
+    );
 
+    Cypress.log({
+      name: `${severity[violation.impact]} AllY`,
+      consoleProps: () => violation,
+      $el: nodes,
+      message: `[${violation.help}](${violation.helpUrl})`,
     });
 
+    violation.nodes.forEach(({ target }) => {
+      Cypress.log({
+        name: "ℹ▶",
+        consoleProps: () => violation,
+        $el: Cypress.$(target.join(",")),
+        message: target,
+      });
+    });
+  });
+}
 
-    name: '${sevirity}'
-
+function report(){
+  console.log('axe reporting');
+  createHtmlReport({ results: { violations: 'Result[]' } })
+  console.log(typeof(violation))
 }
 
 const terminalLog = (violations) => {
@@ -66,10 +46,9 @@ const terminalLog = (violations) => {
     )
     // pluck specific keys to keep the table readable
     const violationData = violations.map(
-      ({ id, impact,help,  description, nodes, helpUrl }) => ({
+      ({ id, impact, description, nodes, helpUrl }) => ({
         id,
         impact,
-        help,
         description,
         nodes: nodes.length,
         helpUrl
@@ -78,13 +57,17 @@ const terminalLog = (violations) => {
     )
    
     cy.task('table', violationData)
+    cy.task('createAxeReport')
+  //report()
+  console.log(`Violation is  ${typeof(violation)}`);
+
   }
 
+  
 
 Cypress.Commands.add("checkPageA11y", (path) => {
     cy.visit(path);
     cy.injectAxe();
+    
     cy.checkA11y(null, null, terminalLog);
-}
-
-)
+})
