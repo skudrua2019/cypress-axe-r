@@ -1,5 +1,6 @@
 import { createHtmlReport } from 'axe-html-reporter';
 
+
 const severity ={
     minor:'Minor',
     moderate: 'Mod',
@@ -31,11 +32,11 @@ function callback(violations) {
   });
 }
 
-function report(){
-  console.log('axe reporting');
-  createHtmlReport({ results: { violations: 'Result[]' } })
-  console.log(typeof(violation))
-}
+  //get it describtion
+  export  function getTestName(){
+    let name = Cypress.mocha.getRunner().suite.ctx.test;
+    return name;
+  }
 
 const terminalLog = (violations) => {
     cy.task(
@@ -58,8 +59,9 @@ const terminalLog = (violations) => {
    
     cy.task('table', violationData)
     cy.task('createAxeReport')
+    cy.task('writeResults', violationData)
   //report()
-  console.log(`Violation is  ${typeof(violation)}`);
+  console.log(`Violation is  ${typeof(violationData)}`);
 
   }
 
