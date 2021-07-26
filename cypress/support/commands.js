@@ -72,4 +72,7 @@ Cypress.Commands.add("checkPageA11y", (path) => {
     cy.injectAxe();
     
     cy.checkA11y(null, null, terminalLog);
+    let arr = ['sveta', 'julia']
+    let nam = arr[0]
+    console.log(nam)
 })
