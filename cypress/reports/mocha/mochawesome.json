@@ -5,9 +5,9 @@
     "passes": 0,
     "pending": 0,
     "failures": 2,
-    "start": "2021-07-25T20:22:38.720Z",
-    "end": "2021-07-25T20:23:05.465Z",
-    "duration": 26745,
+    "start": "2021-07-26T19:47:27.335Z",
+    "end": "2021-07-26T19:47:58.457Z",
+    "duration": 31122,
     "testsRegistered": 2,
     "passPercent": 0,
     "pendingPercent": 0,
@@ -18,7 +18,7 @@
   },
   "results": [
     {
-      "uuid": "bb344b57-ab11-4db1-99d3-218e1c8b06dd",
+      "uuid": "fbbe34c5-7a9f-4461-931f-e936e8d93763",
       "title": "",
       "fullFile": "cypress/integration/axe/axe.spec.js",
       "file": "cypress/integration/axe/axe.spec.js",
@@ -27,7 +27,7 @@
       "tests": [],
       "suites": [
         {
-          "uuid": "967d0d18-c172-4701-9fa7-fd334049298a",
+          "uuid": "81b617cc-9321-402d-83f7-848a6c0d59f8",
           "title": "axe testing",
           "fullFile": "",
           "file": "",
@@ -38,7 +38,7 @@
               "title": "dettol homepage",
               "fullTitle": "axe testing dettol homepage",
               "timedOut": null,
-              "duration": 14182,
+              "duration": 9635,
               "state": "failed",
               "speed": null,
               "pass": false,
@@ -48,11 +48,11 @@
               "code": "cy.checkPageA11y('https://www.dettol.co.uk/');",
               "err": {
                 "message": "AssertionError: 5 accessibility violations were detected: expected 5 to equal 0",
-                "estack": "AssertionError: 5 accessibility violations were detected: expected 5 to equal 0\n    at Context.eval (https://www.dettol.co.uk/__cypress/tests?p=cypress\\support\\index.js:2744:20)",
+                "estack": "AssertionError: 5 accessibility violations were detected: expected 5 to equal 0\n    at Context.eval (https://www.dettol.co.uk/__cypress/tests?p=cypress\\support\\index.js:2799:20)",
                 "diff": null
               },
-              "uuid": "24784fa7-d75e-4895-96af-bfaffcc39d00",
-              "parentUUID": "967d0d18-c172-4701-9fa7-fd334049298a",
+              "uuid": "b2ba4941-3aa7-499c-8b28-d80efece14c0",
+              "parentUUID": "81b617cc-9321-402d-83f7-848a6c0d59f8",
               "isHook": false,
               "skipped": false
             },
@@ -60,7 +60,7 @@
               "title": "dettol faq page",
               "fullTitle": "axe testing dettol faq page",
               "timedOut": null,
-              "duration": 4971,
+              "duration": 2826,
               "state": "failed",
               "speed": null,
               "pass": false,
@@ -69,12 +69,12 @@
               "context": "[\n  \"assets/axe/axe.spec.js/axe testing -- dettol faq page (failed).png\",\n  {\n    \"title\": \"Failed screenshot\",\n    \"value\": \"screenshots\\\\axe\\\\axe.spec.js\\\\axe testing -- dettol faq page (failed).png\"\n  }\n]",
               "code": "cy.checkPageA11y('https://www.dettol.co.uk/faq/');",
               "err": {
-                "message": "AssertionError: 4 accessibility violations were detected: expected 4 to equal 0",
-                "estack": "AssertionError: 4 accessibility violations were detected: expected 4 to equal 0\n    at Context.eval (https://www.dettol.co.uk/__cypress/tests?p=cypress\\support\\index.js:2744:20)",
+                "message": "AssertionError: 3 accessibility violations were detected: expected 3 to equal 0",
+                "estack": "AssertionError: 3 accessibility violations were detected: expected 3 to equal 0\n    at Context.eval (https://www.dettol.co.uk/__cypress/tests?p=cypress\\support\\index.js:2799:20)",
                 "diff": null
               },
-              "uuid": "1e765bd2-4838-4a3e-a7d6-89c91f4188a4",
-              "parentUUID": "967d0d18-c172-4701-9fa7-fd334049298a",
+              "uuid": "7980021a-8f63-4e54-953f-3935a80cdd41",
+              "parentUUID": "81b617cc-9321-402d-83f7-848a6c0d59f8",
               "isHook": false,
               "skipped": false
             }
@@ -82,12 +82,12 @@
           "suites": [],
           "passes": [],
           "failures": [
-            "24784fa7-d75e-4895-96af-bfaffcc39d00",
-            "1e765bd2-4838-4a3e-a7d6-89c91f4188a4"
+            "b2ba4941-3aa7-499c-8b28-d80efece14c0",
+            "7980021a-8f63-4e54-953f-3935a80cdd41"
           ],
           "pending": [],
           "skipped": [],
-          "duration": 19153,
+          "duration": 12461,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000

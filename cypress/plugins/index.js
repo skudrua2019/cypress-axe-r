@@ -17,12 +17,7 @@
  * */
 const { lighthouse, pa11y, prepareAudit } = require("cypress-audit");
 const { createHtmlReport } = require('axe-html-reporter');
-//const { getTestName } = require('../support/utils')
 
-const fs = require('fs')
-const dirPath = 'cypress/axe-report1'
-const dir = 'cypress/axe-report1'
-var rimraf = require("rimraf");
 
 
 
@@ -48,7 +43,7 @@ module.exports = (on, config) => {
       return null
     },
 
-    createAxeReport(violationss) {
+    createAxeReport(violations) {
       createHtmlReport({
         results: { violations: 'Result[]' },
         options: {
@@ -60,29 +55,7 @@ module.exports = (on, config) => {
       return null
     },
     //write axe resultes to the json file 
-    writeResults(violations, testName) {
-
-      /*if(!fs.existsSync(dir)){
-        fs.mkdirSync(dir)
-      }else {
-        console.log(`Folder ${dir} already exists and will be removed`)
-        rimraf.sync(dir, () => {console.log("the folder is removed");})
-      }*/
-      //get it describtion
-      
-      testName = 'dettol'
-      //Cypress.mocha.getRunner().suite.ctx.test;
-      
-
-      if (fs.existsSync(dir)) {
-        fs.writeFileSync(dir + `/axe_${testName + Date.now()}.json`, JSON.stringify(violations))
-      } else {
-        console.log(`${dir} not found`)
-      }
-
-      //writeResultsToFile(violations, testName)
-      return null
-    }
+   
   });
 
 

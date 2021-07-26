@@ -27,12 +27,12 @@ describe('axe testing', () => {
 
  it('dettol homepage', () => {
      cy.checkPageA11y('https://www.dettol.co.uk/')
- 
-
+     
+     
  })
  it('dettol faq page', () => {
   cy.checkPageA11y('https://www.dettol.co.uk/faq/')
-
+  
 
 })
 
