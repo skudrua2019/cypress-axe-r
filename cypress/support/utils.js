@@ -1,6 +1,7 @@
+import { createHtmlReport } from "axe-html-reporter";
 
 
-const dir = 'axe-reports'
+const dir = 'cypress/axe-reports'
 const JSONToCSV = require("json2csv").parse;
 
 
@@ -11,6 +12,9 @@ export function writeResultsAxeToJson(violations) {
 
 }
 
+export const report = function (){
+
+}
 
 //write to csv file
 export function writeTocsv(axeObg) {

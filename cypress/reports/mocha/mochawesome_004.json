@@ -5,9 +5,9 @@
     "passes": 0,
     "pending": 0,
     "failures": 2,
-    "start": "2021-07-26T20:28:55.998Z",
-    "end": "2021-07-26T20:29:12.757Z",
-    "duration": 16759,
+    "start": "2021-08-02T17:47:49.708Z",
+    "end": "2021-08-02T17:48:06.457Z",
+    "duration": 16749,
     "testsRegistered": 2,
     "passPercent": 0,
     "pendingPercent": 0,
@@ -18,7 +18,7 @@
   },
   "results": [
     {
-      "uuid": "26d2a3ed-5831-4493-af3c-fd9436394ed4",
+      "uuid": "b35bbcbb-2491-49bf-9994-d603e34b5e6d",
       "title": "",
       "fullFile": "cypress/integration/axe/axe.spec.js",
       "file": "cypress/integration/axe/axe.spec.js",
@@ -27,7 +27,7 @@
       "tests": [],
       "suites": [
         {
-          "uuid": "3dd9e20b-cb37-4bf5-8b4b-17c06ea19573",
+          "uuid": "7c0a1f68-b404-46ee-9dba-a2a04774bdc5",
           "title": "axe testing",
           "fullFile": "",
           "file": "",
@@ -35,24 +35,24 @@
           "afterHooks": [],
           "tests": [
             {
-              "title": "dettol homepage",
-              "fullTitle": "axe testing dettol homepage",
+              "title": "Finish homepage",
+              "fullTitle": "axe testing Finish homepage",
               "timedOut": null,
-              "duration": 6990,
+              "duration": 7048,
               "state": "failed",
               "speed": null,
               "pass": false,
               "fail": true,
               "pending": false,
-              "context": "[\n  \"assets/axe/axe.spec.js/axe testing -- dettol homepage (failed).png\",\n  {\n    \"title\": \"Failed screenshot\",\n    \"value\": \"screenshots\\\\axe\\\\axe.spec.js\\\\axe testing -- dettol homepage (failed).png\"\n  }\n]",
+              "context": "[\n  \"assets/axe/axe.spec.js/axe testing -- Finish homepage (failed).png\",\n  {\n    \"title\": \"Failed screenshot\",\n    \"value\": \"screenshots\\\\axe\\\\axe.spec.js\\\\axe testing -- Finish homepage (failed).png\"\n  }\n]",
               "code": "cy.checkPageA11y('https://www.dettol.co.uk/');",
               "err": {
-                "message": "ReferenceError: target is not defined",
-                "estack": "ReferenceError: target is not defined\n    at eval (https://www.dettol.co.uk/__cypress/tests?p=cypress\\support\\index.js:162:5)\n    at terminalLog (https://www.dettol.co.uk/__cypress/tests?p=cypress\\support\\index.js:146:36)\n    at Context.eval (https://www.dettol.co.uk/__cypress/tests?p=cypress\\support\\index.js:2769:17)",
+                "message": "AssertionError: 5 accessibility violations were detected: expected 5 to equal 0",
+                "estack": "AssertionError: 5 accessibility violations were detected: expected 5 to equal 0\n    at Context.eval (https://www.dettol.co.uk/__cypress/tests?p=cypress\\support\\index.js:27008:20)",
                 "diff": null
               },
-              "uuid": "f6984dda-6fdf-4a76-a2f3-65d73fb444c8",
-              "parentUUID": "3dd9e20b-cb37-4bf5-8b4b-17c06ea19573",
+              "uuid": "d6315f03-5271-4be3-958a-4180bd46c63a",
+              "parentUUID": "7c0a1f68-b404-46ee-9dba-a2a04774bdc5",
               "isHook": false,
               "skipped": false
             },
@@ -60,7 +60,7 @@
               "title": "dettol faq page",
               "fullTitle": "axe testing dettol faq page",
               "timedOut": null,
-              "duration": 3684,
+              "duration": 2914,
               "state": "failed",
               "speed": null,
               "pass": false,
@@ -69,12 +69,12 @@
               "context": "[\n  \"assets/axe/axe.spec.js/axe testing -- dettol faq page (failed).png\",\n  {\n    \"title\": \"Failed screenshot\",\n    \"value\": \"screenshots\\\\axe\\\\axe.spec.js\\\\axe testing -- dettol faq page (failed).png\"\n  }\n]",
               "code": "cy.checkPageA11y('https://www.dettol.co.uk/faq/');",
               "err": {
-                "message": "ReferenceError: target is not defined",
-                "estack": "ReferenceError: target is not defined\n    at eval (https://www.dettol.co.uk/__cypress/tests?p=cypress\\support\\index.js:162:5)\n    at terminalLog (https://www.dettol.co.uk/__cypress/tests?p=cypress\\support\\index.js:146:36)\n    at Context.eval (https://www.dettol.co.uk/__cypress/tests?p=cypress\\support\\index.js:2769:17)",
+                "message": "AssertionError: 4 accessibility violations were detected: expected 4 to equal 0",
+                "estack": "AssertionError: 4 accessibility violations were detected: expected 4 to equal 0\n    at Context.eval (https://www.dettol.co.uk/__cypress/tests?p=cypress\\support\\index.js:27008:20)",
                 "diff": null
               },
-              "uuid": "976c3dc4-f65a-49ea-8ada-89315a66a4a4",
-              "parentUUID": "3dd9e20b-cb37-4bf5-8b4b-17c06ea19573",
+              "uuid": "711ad3cc-bf51-4dbc-9fc9-ee5614bb7df2",
+              "parentUUID": "7c0a1f68-b404-46ee-9dba-a2a04774bdc5",
               "isHook": false,
               "skipped": false
             }
@@ -82,12 +82,12 @@
           "suites": [],
           "passes": [],
           "failures": [
-            "f6984dda-6fdf-4a76-a2f3-65d73fb444c8",
-            "976c3dc4-f65a-49ea-8ada-89315a66a4a4"
+            "d6315f03-5271-4be3-958a-4180bd46c63a",
+            "711ad3cc-bf51-4dbc-9fc9-ee5614bb7df2"
           ],
           "pending": [],
           "skipped": [],
-          "duration": 10674,
+          "duration": 9962,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000

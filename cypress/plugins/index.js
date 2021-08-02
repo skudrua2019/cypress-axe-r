@@ -16,7 +16,7 @@
  * @type {Cypress.PluginConfig}
  * */
 const { lighthouse, pa11y, prepareAudit } = require("cypress-audit");
-const { createHtmlReport } = require('axe-html-reporter');
+const  HtmlReporter = require('axe-html-reporter');
 
 
 
@@ -43,9 +43,10 @@ module.exports = (on, config) => {
       return null
     },
 
-    createAxeReport(violations) {
-      createHtmlReport({
-        results: { violations: 'Result[]' },
+    createAxeReport(axeViolations) {
+      //const violationsR = violat
+      HtmlReporter.createHtmlReport({
+        results: axeViolations,
         options: {
           // projectKey: 'JIRA_PROJECT_KEY',
           outputDir: 'axe-reports',

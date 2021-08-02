@@ -1,5 +1,6 @@
-import { createHtmlReport } from 'axe-html-reporter';
+
 import { writeResultsAxeToJson, writeTocsv } from './utils';
+import { createHtmlReport } from 'axe-html-reporter';
 
 const severity = {
   minor: 'Minor',
@@ -42,38 +43,42 @@ const terminalLog = (violations) => {
   )
   // pluck specific keys to keep the table readable
   const violationDataLog = violations.map(
-    ({ id, impact, description, nodes, }) => ({
+    ({ id, impact, description, nodes, tags }) => ({
       id,
       impact,
       description,
-      nodes:nodes.length,
-
+      nodes: nodes.length,
+      tags
     })
   )
   const violationData = violations.map(
-    ({ id, impact, description, help, nodes ,helpUrl, tags,  }) => ({
+    ({ id, impact, description, help, nodes, helpUrl, }) => ({
       id,
       impact,
       description,
       help,
-      nodes: [nodes.length, html],
+      nodes: nodes.length,
       helpUrl,
-      tags,
-      
+
+
     })
   )
 
 
   cy.task('table', violationDataLog);
- //cy.task('createAxeReport');
+
+
+
 
   writeResultsAxeToJson(violations)
   writeTocsv(violations)
-console.log(violations)
-console.log('type is '+typeof(violations))
+  console.log(violations)
+  console.log('type is ' + typeof (violations))
+   
+ //html repot
 
-//createHtmlReport({results}
-
+  
+  //cy.task('createAxeReport', violations);
 
 
 }
@@ -84,6 +89,15 @@ Cypress.Commands.add("checkPageA11y", (path) => {
   cy.visit(path);
   cy.injectAxe();
 
-  cy.checkA11y(null, null, terminalLog);
+  cy.checkA11y(null, {
+    /*runOnly: {
+      type: 'tag',
+      value: ['wcag21a', 'wcag21aa', 'wcag2a', 'wcag2aa', 'best-practice']
+    },*/
+    noHtml: false,
+    selectors: true,
+    //elementRef: true,
+
+  }, terminalLog);
 
 })

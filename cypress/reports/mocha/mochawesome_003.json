@@ -5,9 +5,9 @@
     "passes": 0,
     "pending": 0,
     "failures": 2,
-    "start": "2021-07-26T20:11:14.139Z",
-    "end": "2021-07-26T20:11:32.481Z",
-    "duration": 18342,
+    "start": "2021-08-02T17:37:45.841Z",
+    "end": "2021-08-02T17:38:10.916Z",
+    "duration": 25075,
     "testsRegistered": 2,
     "passPercent": 0,
     "pendingPercent": 0,
@@ -18,7 +18,7 @@
   },
   "results": [
     {
-      "uuid": "55b4f9ec-753c-446f-a77b-30cbea9c9352",
+      "uuid": "be73c94d-4a8e-4fb6-8063-8dbdbfbb0ec1",
       "title": "",
       "fullFile": "cypress/integration/axe/axe.spec.js",
       "file": "cypress/integration/axe/axe.spec.js",
@@ -27,7 +27,7 @@
       "tests": [],
       "suites": [
         {
-          "uuid": "65f46119-3f0f-40fe-9c21-751c76b6881e",
+          "uuid": "24cf6a12-1595-4130-b863-330f14655712",
           "title": "axe testing",
           "fullFile": "",
           "file": "",
@@ -35,24 +35,24 @@
           "afterHooks": [],
           "tests": [
             {
-              "title": "dettol homepage",
-              "fullTitle": "axe testing dettol homepage",
+              "title": "Finish homepage",
+              "fullTitle": "axe testing Finish homepage",
               "timedOut": null,
-              "duration": 5989,
+              "duration": 4419,
               "state": "failed",
               "speed": null,
               "pass": false,
               "fail": true,
               "pending": false,
-              "context": "[\n  \"assets/axe/axe.spec.js/axe testing -- dettol homepage (failed).png\",\n  {\n    \"title\": \"Failed screenshot\",\n    \"value\": \"screenshots\\\\axe\\\\axe.spec.js\\\\axe testing -- dettol homepage (failed).png\"\n  }\n]",
+              "context": "[\n  \"assets/axe/axe.spec.js/axe testing -- Finish homepage (failed).png\",\n  {\n    \"title\": \"Failed screenshot\",\n    \"value\": \"screenshots\\\\axe\\\\axe.spec.js\\\\axe testing -- Finish homepage (failed).png\"\n  }\n]",
               "code": "cy.checkPageA11y('https://www.dettol.co.uk/');",
               "err": {
-                "message": "AssertionError: 5 accessibility violations were detected: expected 5 to equal 0",
-                "estack": "AssertionError: 5 accessibility violations were detected: expected 5 to equal 0\n    at Context.eval (https://www.dettol.co.uk/__cypress/tests?p=cypress\\support\\index.js:2789:20)",
+                "message": "TypeError: console.log(...) is not a function",
+                "estack": "TypeError: console.log(...) is not a function\n    at terminalLog (https://www.dettol.co.uk/__cypress/tests?p=cypress\\support\\index.js:168:3)\n    at Context.eval (https://www.dettol.co.uk/__cypress/tests?p=cypress\\support\\index.js:26995:17)",
                 "diff": null
               },
-              "uuid": "729a0417-2d98-49f3-b8fe-2968c7ae1357",
-              "parentUUID": "65f46119-3f0f-40fe-9c21-751c76b6881e",
+              "uuid": "36903f84-d6e9-42ea-ba39-3d99454c642c",
+              "parentUUID": "24cf6a12-1595-4130-b863-330f14655712",
               "isHook": false,
               "skipped": false
             },
@@ -60,7 +60,7 @@
               "title": "dettol faq page",
               "fullTitle": "axe testing dettol faq page",
               "timedOut": null,
-              "duration": 4983,
+              "duration": 4834,
               "state": "failed",
               "speed": null,
               "pass": false,
@@ -69,12 +69,12 @@
               "context": "[\n  \"assets/axe/axe.spec.js/axe testing -- dettol faq page (failed).png\",\n  {\n    \"title\": \"Failed screenshot\",\n    \"value\": \"screenshots\\\\axe\\\\axe.spec.js\\\\axe testing -- dettol faq page (failed).png\"\n  }\n]",
               "code": "cy.checkPageA11y('https://www.dettol.co.uk/faq/');",
               "err": {
-                "message": "AssertionError: 4 accessibility violations were detected: expected 4 to equal 0",
-                "estack": "AssertionError: 4 accessibility violations were detected: expected 4 to equal 0\n    at Context.eval (https://www.dettol.co.uk/__cypress/tests?p=cypress\\support\\index.js:2789:20)",
+                "message": "TypeError: console.log(...) is not a function",
+                "estack": "TypeError: console.log(...) is not a function\n    at terminalLog (https://www.dettol.co.uk/__cypress/tests?p=cypress\\support\\index.js:168:3)\n    at Context.eval (https://www.dettol.co.uk/__cypress/tests?p=cypress\\support\\index.js:26995:17)",
                 "diff": null
               },
-              "uuid": "80c117b5-dc05-41a3-90ef-be11275950d8",
-              "parentUUID": "65f46119-3f0f-40fe-9c21-751c76b6881e",
+              "uuid": "f7de77d0-5959-402c-9e68-f05a45e609ed",
+              "parentUUID": "24cf6a12-1595-4130-b863-330f14655712",
               "isHook": false,
               "skipped": false
             }
@@ -82,12 +82,12 @@
           "suites": [],
           "passes": [],
           "failures": [
-            "729a0417-2d98-49f3-b8fe-2968c7ae1357",
-            "80c117b5-dc05-41a3-90ef-be11275950d8"
+            "36903f84-d6e9-42ea-ba39-3d99454c642c",
+            "f7de77d0-5959-402c-9e68-f05a45e609ed"
           ],
           "pending": [],
           "skipped": [],
-          "duration": 10972,
+          "duration": 9253,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000

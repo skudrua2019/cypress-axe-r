@@ -25,7 +25,7 @@ describe('axe testing', () => {
     cy.get('.todo-list li').last().should('have.text', 'Walk the dog')
   })*/
 
- it('dettol homepage', () => {
+ it('Finish homepage', () => {
      cy.checkPageA11y('https://www.dettol.co.uk/')
      
      

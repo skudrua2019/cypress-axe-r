@@ -20,6 +20,7 @@ import "cypress-audit/commands"
 import 'cypress-mochawesome-reporter/register';
 
 import addContext from "mochawesome/addContext";
+import { AxeResults } from 'axe-core';
 //import { createHtmlReport } from 'axe-html-reporter';
 
 Cypress.on("test:after:run", (test, runnable) => {
@@ -29,6 +30,7 @@ Cypress.on("test:after:run", (test, runnable) => {
   }
 
 });
+
 
 
 

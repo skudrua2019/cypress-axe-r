@@ -5,9 +5,9 @@
     "passes": 0,
     "pending": 0,
     "failures": 2,
-    "start": "2021-07-26T20:04:01.460Z",
-    "end": "2021-07-26T20:04:14.150Z",
-    "duration": 12690,
+    "start": "2021-08-02T12:24:12.014Z",
+    "end": "2021-08-02T12:24:29.416Z",
+    "duration": 17402,
     "testsRegistered": 2,
     "passPercent": 0,
     "pendingPercent": 0,
@@ -18,7 +18,7 @@
   },
   "results": [
     {
-      "uuid": "3c96d1c7-5316-44c4-87ed-00669ea54cfc",
+      "uuid": "9e370cd3-7f91-49f6-88f8-4405af29f002",
       "title": "",
       "fullFile": "cypress/integration/axe/axe.spec.js",
       "file": "cypress/integration/axe/axe.spec.js",
@@ -27,7 +27,7 @@
       "tests": [],
       "suites": [
         {
-          "uuid": "8c9edd67-8c57-42af-a859-416fda2bfc59",
+          "uuid": "91cf950a-040e-4242-a193-38ffe707e23b",
           "title": "axe testing",
           "fullFile": "",
           "file": "",
@@ -35,24 +35,24 @@
           "afterHooks": [],
           "tests": [
             {
-              "title": "dettol homepage",
-              "fullTitle": "axe testing dettol homepage",
+              "title": "Finish homepage",
+              "fullTitle": "axe testing Finish homepage",
               "timedOut": null,
-              "duration": 4900,
+              "duration": 3880,
               "state": "failed",
               "speed": null,
               "pass": false,
               "fail": true,
               "pending": false,
-              "context": "[\n  \"assets/axe/axe.spec.js/axe testing -- dettol homepage (failed).png\",\n  {\n    \"title\": \"Failed screenshot\",\n    \"value\": \"screenshots\\\\axe\\\\axe.spec.js\\\\axe testing -- dettol homepage (failed).png\"\n  }\n]",
+              "context": "[\n  \"assets/axe/axe.spec.js/axe testing -- Finish homepage (failed).png\",\n  {\n    \"title\": \"Failed screenshot\",\n    \"value\": \"screenshots\\\\axe\\\\axe.spec.js\\\\axe testing -- Finish homepage (failed).png\"\n  }\n]",
               "code": "cy.checkPageA11y('https://www.dettol.co.uk/');",
               "err": {
-                "message": "TypeError: Cannot destructure property 'results' of 'undefined' as it is undefined.",
-                "estack": "TypeError: Cannot destructure property 'results' of 'undefined' as it is undefined.\n    at createHtmlReport (https://www.dettol.co.uk/__cypress/tests?p=cypress\\support\\index.js:491:29)\n    at terminalLog (https://www.dettol.co.uk/__cypress/tests?p=cypress\\support\\index.js:171:41)\n    at Context.eval (https://www.dettol.co.uk/__cypress/tests?p=cypress\\support\\index.js:2772:17)",
+                "message": "TypeError: console.log(...) is not a function",
+                "estack": "TypeError: console.log(...) is not a function\n    at terminalLog (https://www.dettol.co.uk/__cypress/tests?p=cypress\\support\\index.js:168:3)\n    at Context.eval (https://www.dettol.co.uk/__cypress/tests?p=cypress\\support\\index.js:26995:17)",
                 "diff": null
               },
-              "uuid": "e63611e8-816e-4155-97dc-c8a01f661298",
-              "parentUUID": "8c9edd67-8c57-42af-a859-416fda2bfc59",
+              "uuid": "f175d1f7-1aec-40c0-b2e7-39b981d20d89",
+              "parentUUID": "91cf950a-040e-4242-a193-38ffe707e23b",
               "isHook": false,
               "skipped": false
             },
@@ -60,7 +60,7 @@
               "title": "dettol faq page",
               "fullTitle": "axe testing dettol faq page",
               "timedOut": null,
-              "duration": 1795,
+              "duration": 4870,
               "state": "failed",
               "speed": null,
               "pass": false,
@@ -69,12 +69,12 @@
               "context": "[\n  \"assets/axe/axe.spec.js/axe testing -- dettol faq page (failed).png\",\n  {\n    \"title\": \"Failed screenshot\",\n    \"value\": \"screenshots\\\\axe\\\\axe.spec.js\\\\axe testing -- dettol faq page (failed).png\"\n  }\n]",
               "code": "cy.checkPageA11y('https://www.dettol.co.uk/faq/');",
               "err": {
-                "message": "TypeError: Cannot destructure property 'results' of 'undefined' as it is undefined.",
-                "estack": "TypeError: Cannot destructure property 'results' of 'undefined' as it is undefined.\n    at createHtmlReport (https://www.dettol.co.uk/__cypress/tests?p=cypress\\support\\index.js:491:29)\n    at terminalLog (https://www.dettol.co.uk/__cypress/tests?p=cypress\\support\\index.js:171:41)\n    at Context.eval (https://www.dettol.co.uk/__cypress/tests?p=cypress\\support\\index.js:2772:17)",
+                "message": "TypeError: console.log(...) is not a function",
+                "estack": "TypeError: console.log(...) is not a function\n    at terminalLog (https://www.dettol.co.uk/__cypress/tests?p=cypress\\support\\index.js:168:3)\n    at Context.eval (https://www.dettol.co.uk/__cypress/tests?p=cypress\\support\\index.js:26995:17)",
                 "diff": null
               },
-              "uuid": "c5ef1d27-6ce5-4e75-9ff8-ffa17e83aeae",
-              "parentUUID": "8c9edd67-8c57-42af-a859-416fda2bfc59",
+              "uuid": "42074fbf-31d9-45b9-8128-14a4e24069a1",
+              "parentUUID": "91cf950a-040e-4242-a193-38ffe707e23b",
               "isHook": false,
               "skipped": false
             }
@@ -82,12 +82,12 @@
           "suites": [],
           "passes": [],
           "failures": [
-            "e63611e8-816e-4155-97dc-c8a01f661298",
-            "c5ef1d27-6ce5-4e75-9ff8-ffa17e83aeae"
+            "f175d1f7-1aec-40c0-b2e7-39b981d20d89",
+            "42074fbf-31d9-45b9-8128-14a4e24069a1"
           ],
           "pending": [],
           "skipped": [],
-          "duration": 6695,
+          "duration": 8750,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000
